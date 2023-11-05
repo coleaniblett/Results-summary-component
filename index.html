@@ -20,6 +20,22 @@
     }
 
     /* full component styles */
+    p {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    h1 {
+      font-weight: 800;
+    }
+    h2 {
+      font-weight: 700;
+    }
+    h3 {
+      font-weight: 700;
+    }
+    h4 {
+      font-weight: 700;
+    }
     body {
       font-family: HankenGrotesk, sans-serif;
       margin: 0;
@@ -45,13 +61,19 @@
     .result {
       text-align: center;
       width: 50%;
-      background: linear-gradient(0deg, rgba(24,0,163,1) 0%, rgba(78,67,255,1) 100%);
+      background: linear-gradient(hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 100%);
     }
     .result-content {
-      margin: 1.75rem 3rem; 
+      margin: 1.625rem 2.75rem; 
     }
     .result-content h1, h2 {
       color: white;
+    }
+    .result-content h2 {
+      margin: 1rem 0rem 0.5rem;
+    }
+    .result-content p {
+      margin-top: 0.5rem;
     }
     .result-content h3, p {
       color: lightgray;
@@ -65,7 +87,7 @@
       aspect-ratio: 1;
       max-width: 200px;
       margin: auto;
-      background: linear-gradient(0deg, rgba(78,67,255,1) 0%, rgba(24,0,163,1) 100%);
+      background: linear-gradient(hsla(256, 72%, 46%, 1) 0%, hsla(241, 72%, 46%, 0) 100%);
     }
     .score h1, .score p {
       margin: 0;
@@ -75,9 +97,6 @@
     }
     .score p {
       color: gray;
-    }
-    .result p {
-      font-weight: 500;
     }
 
     /* summary styles */
@@ -112,29 +131,29 @@
       background-color: hsl(0, 50%, 95%);
     }
     #reaction h4 {
-      color: hsl(0, 50%, 50%);
+      color: hsl(0, 100%, 67%);
     }
     #memory {
       background-color: hsl(55, 50%, 95%);
     }
     #memory h4 {
-      color: hsl(55, 80%, 50%);
+      color: hsl(39, 100%, 56%);
     }
     #verbal {
       background-color: hsl(135, 50%, 95%);
     }
     #verbal h4 {
-      color: hsl(135, 50%, 50%);
+      color: hsl(166, 100%, 37%);
     }
     #visual {
       background-color: hsl(240, 50%, 95%);
     }
     #visual h4 {
-      color: hsl(240, 50%, 50%);
+      color: hsl(234, 85%, 45%);
     }
     button {
       background-color: navy;
-      margin: 1.5rem 0;
+      margin: 1.5rem 0 0 0;
       color: white;
       border-radius: 30px;
       border-width: 0;
@@ -156,6 +175,9 @@
       }
       .result {
         border-radius: 0 0 20px 20px;
+      }
+      .score {
+        width: 55%;
       }
     }
 

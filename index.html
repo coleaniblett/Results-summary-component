@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="./assets/fonts/HankenGrotesk-VariableFont_wght.ttf">
+  <title>Frontend Mentor | Results summary component</title>
+
+  <style>
+    /* default attribution styles */
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsla(228, 45%, 44%, 0.452); }
+
+    /* font */
+    @font-face {
+        font-family: 'HankenGrotesk';
+        src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+    }
+
+    /* full component styles */
+    body {
+      font-family: HankenGrotesk, sans-serif;
+      margin: 0;
+      height: 100dvh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      box-shadow: 10px 15px 50px rgb(71, 63, 110);
+      margin-bottom: 1rem;
+      max-width: 700px;
+    }
+    .rounded {
+      border-radius: 20px;
+    }
+
+    /* result styles */
+    .result {
+      text-align: center;
+      width: 50%;
+      background: linear-gradient(0deg, rgba(24,0,163,1) 0%, rgba(78,67,255,1) 100%);
+    }
+    .result-content {
+      margin: 1.75rem 3rem; 
+    }
+    .result-content h1, h2 {
+      color: white;
+    }
+    .result-content h3, p {
+      color: lightgray;
+    }
+    .score {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      aspect-ratio: 1;
+      max-width: 200px;
+      margin: auto;
+      background: linear-gradient(0deg, rgba(78,67,255,1) 0%, rgba(24,0,163,1) 100%);
+    }
+    .score h1, .score p {
+      margin: 0;
+    }
+    .score h1 {
+      font-size: 3.75rem;
+    }
+    .score p {
+      color: gray;
+    }
+    .result p {
+      font-weight: 500;
+    }
+
+    /* summary styles */
+    .summary {
+      width: 50%;
+    }
+    .summary-content {
+      margin: 2rem;
+      
+    }
+
+    .category {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+      border-radius: 10px;
+      padding: 0 1.5rem;
+      
+    }
+    .label {
+      display: flex;
+    }
+    .label h4 {
+      margin: 0 1rem;
+    }
+    .category p span {
+      color: black;
+    }
+    #reaction {
+      background-color: hsl(0, 50%, 95%);
+    }
+    #reaction h4 {
+      color: hsl(0, 50%, 50%);
+    }
+    #memory {
+      background-color: hsl(55, 50%, 95%);
+    }
+    #memory h4 {
+      color: hsl(55, 80%, 50%);
+    }
+    #verbal {
+      background-color: hsl(135, 50%, 95%);
+    }
+    #verbal h4 {
+      color: hsl(135, 50%, 50%);
+    }
+    #visual {
+      background-color: hsl(240, 50%, 95%);
+    }
+    #visual h4 {
+      color: hsl(240, 50%, 50%);
+    }
+    button {
+      background-color: navy;
+      margin: 1.5rem 0;
+      color: white;
+      border-radius: 30px;
+      border-width: 0;
+      width: 100%;
+    }
+
+    /* mobile styles */
+    @media screen and (max-width: 712px) {
+      body {
+        justify-content: start;
+      }
+      .main {
+        max-width: none;
+        box-shadow: none;
+      }
+      .result, .summary {
+        max-width: none;
+        width: 100dvw;
+      }
+      .result {
+        border-radius: 0 0 20px 20px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="main rounded">
+    <div class="result rounded">
+      <div class="result-content">
+        <h3>Your Result</h3>
+        <div class="score">
+          <h1>76</h1>
+          <p>of 100</p>
+        </div>
+        <h2>Great</h2>
+        <p>You scored higher than 65% of the people who have taken these tests.</p>
+      </div>
+    </div>
+    <div class="summary">
+      <div class="summary-content">
+        <h3>Summary</h3>
+        <div class="categories">
+          <div class="category" id="reaction">
+            <div class="label">
+              <img src="./assets/images/icon-reaction.svg" alt="lightning bolt icon for reaction result">
+              <h4>Reaction</h4>
+            </div>
+            <p><span>80</span> / 100</p>
+          </div>
+          <div class="category" id="memory">
+            <div class="label">
+              <img src="./assets/images/icon-memory.svg" alt="brain icon for memory result">
+              <h4>Memory</h4>
+            </div>
+            <p><span>92</span> / 100</p>
+          </div>
+          <div class="category" id="verbal">
+            <div class="label">
+              <img src="./assets/images/icon-verbal.svg" alt="speech bubble icon for verbal result">
+              <h4>Verbal</h4>
+            </div>
+            <p><span>61</span> / 100</p>
+          </div>
+          <div class="category" id="visual">
+            <div class="label">
+              <img src="./assets/images/icon-visual.svg" alt="eye icon for visual result">
+              <h4>Visual</h4>
+            </div>
+            <p><span>72</span> / 100</p>
+          </div>
+        </div>
+        <button><h3>Continue</h3></button>
+      </div>
+      
+    </div>
+  </div> 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Cole Niblett</a>.
+  </div>
+</body>
+</html>
